@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +9,25 @@
 	<link rel="stylesheet" href="./css/modern-normalize.css">
 	<link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
 
 	<header id="header">
 		<div class="container">
-			<a	href="." class="logo-header"><img src="./images/WebStudioheader.png" alt="logo"></a>
+			<a href="." class="logo-header"><img src="./images/WebStudioheader.png" alt="logo"></a>
 			<nav>
 				<ul class="navygation">
 					<li><a href="./index.html" class="activ">Студия</a></li>
 					<li><a href="./portfolio.html">Портфолио</a></li>
 					<li><a href="#">Контакты</a></li>
 				</ul>
-				<ul  class="contact-us">
+				<ul class="contact-us">
 					<li>
 						<a href="mailto:info@devstudio.com" class="contact-us-list">
-						<svg class="contact-us-icon" width="16" height="12">
-							<use href="./images/symbol-defs.svg#icon-envelope"></use>
-						</svg>
-						info@devstudio.com
+							<svg class="contact-us-icon" width="16" height="12">
+								<use href="./images/symbol-defs.svg#icon-envelope"></use>
+							</svg>
+							info@devstudio.com
 						</a>
 					</li>
 					<li>
@@ -74,7 +76,7 @@
 						<p>Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
 					</li>
 				</ul>
-				
+
 			</div>
 		</section>
 		<section class="activity">
@@ -99,7 +101,7 @@
 					</li>
 					<li>
 						<div class="activity-block">
-							<img src="./images/img3.jpg"  alt="Разработка приложений для планшета" width="370">
+							<img src="./images/img3.jpg" alt="Разработка приложений для планшета" width="370">
 							<div class="activity-text">
 								<p>Дизайнерские решения</p>
 							</div>
@@ -191,9 +193,9 @@
 							</ul>
 						</div>
 					</li>
-				
+
 					<li class="team-item">
-					<img src="./images/img_team3.jpg" alt="Николай Тарасов" width="270">
+						<img src="./images/img_team3.jpg" alt="Николай Тарасов" width="270">
 						<div>
 							<h3>Николай Тарасов</h3>
 							<p>Marketing</p>
@@ -231,9 +233,9 @@
 							</ul>
 						</div>
 					</li>
-					
+
 					<li class="team-item">
-					<img src="./images/img_team4.jpg" alt="Михаил Ермаков" width="270">
+						<img src="./images/img_team4.jpg" alt="Михаил Ермаков" width="270">
 						<div>
 							<h3>Михаил Ермаков</h3>
 							<p>UI Designer</p>
@@ -332,7 +334,7 @@
 		<div class="container">
 			<div class="footer-box">
 				<div class="addres-box">
-					<a	href="" class="logo-footer"><img src="./images/WebStudiofooter.png" alt="logo"></a>
+					<a href="" class="logo-footer"><img src="./images/WebStudiofooter.png" alt="logo"></a>
 					<address>
 						<ul class="footer-contacts">
 							<li class="addres"><a href="#">г. Киев, пр-т Леси Украинки, 26</a></li>
@@ -374,11 +376,66 @@
 						</li>
 					</ul>
 				</div>
+
+				<!-- форма підписки у футері -->
+
+				<div class="footer-subscribe">
+					<p class="title">Подпишитесь на рассылку</p>
+					<form action="" method="post">
+						<input type="email" name="mail" placeholder="E-mail" />
+						<button class="btn">Подписаться</button>
+					</form>
+				</div>
+
 			</div>
 		</div>
 	</footer>
+
+	<!-- Модальне вікно -->
 	<div class="backdrop is-hidden" data-modal>
-		<div	class="modal">
+		<div class="modal" id="modal">
+			<b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
+			<form class="form">
+				<label class="form-label">
+					<span class="form-text">Имя</span>
+					<div class="input-group">
+						<input class="form-input" name="user-name" type="text" />
+						<svg class="form-icon" width="18" height="18">
+							<use href="./images/symbol-defs.svg#form-person"></use>
+						</svg>
+					</div>
+				</label>
+				<label class="form-label">
+					<span class="form-text">Телефон</span>
+					<div class="input-group">
+						<input class="form-input" name="user-phone" type="tel" />
+						<svg class="form-icon" width="18" height="18">
+							<use href="./images/symbol-defs.svg#form-phone"></use>
+						</svg>
+					</div>
+				</label>
+				<label class="form-label">
+					<span class="form-text">Почта</span>
+					<div class="input-group">
+						<input class="form-input" name="user-email" type="email" />
+						<svg class="form-icon" width="18" height="18">
+							<use href="./images/symbol-defs.svg#form-email"></use>
+						</svg>
+					</div>
+				</label>
+				<label class="form-label">
+					<span class="form-text">Комментарий</span>
+					<textarea class="comment" name="comment" rows="7" placeholder="Введите текст"></textarea>
+				</label>
+				<label class="form-policy">
+					<input class="checkbox" type="checkbox" name="policy" />
+					<span class="policy-icon"></span>
+					Соглашаюсь с рассылкой и принимаю
+					<a class="link" href="">Условия договора</a>
+				</label>
+				<button class="btn" type="submit">Отправить</button>
+			</form>
+			<!--кнопка закриття модалки-->
 			<button class="btn" data-modal-close>
 				<svg class="close-button" width="18" height="18">
 					<use href="./images/symbol-defs.svg#icon-close"></use>
@@ -386,6 +443,16 @@
 			</button>
 		</div>
 	</div>
-	<script src="./js/modal.js"></script>		
+	<!-- <div class="backdrop is-hidden" data-modal>
+		<div class="modal">
+			<button class="btn" data-modal-close>
+				<svg class="close-button" width="18" height="18">
+					<use href="./images/symbol-defs.svg#icon-close"></use>
+				</svg>
+			</button>
+		</div>
+	</div> -->
+	<script src="./js/modal.js"></script>
 </body>
+
 </html>
