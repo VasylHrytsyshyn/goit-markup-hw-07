@@ -611,6 +611,10 @@ nav li:not(:first-child) {
   position: relative;
 }
 
+.navygation li:not(:first-child) {
+  margin-left: 50px;
+}
+
 .navygation .activ::after {
   content: "";
   position: absolute;
